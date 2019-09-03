@@ -6,7 +6,6 @@ const app = express();
 const GSIntegration = require('./server/integration');
 const port = 1337;
 
-
 app.use(express.static(path.join(__dirname, "./public")));
 
 app.get('/', (req, res) => {
