@@ -13,7 +13,7 @@ A node application for Dota 2 game state integration alerts.
 
 ## Browser support
 
-This application is only intended to be run on `Firefox`. The new Google Web Audi API policy prohibits automatic audio playback.
+This application is intended to be run only on `Firefox`. The new Google Web Audi API policy prohibits automatic audio playback.
 
 read more:
 
@@ -23,3 +23,6 @@ https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaud
 
 `Microsoft Edge/IE `are not supporting SSE (server sent events) 
 
+## Note
+
+This application will consume ports `1337` and `3000`.
