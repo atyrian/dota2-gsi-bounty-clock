@@ -4,7 +4,7 @@ A node application for Dota 2 game state integration alerts.
 
 ## Installation
 
-- Clone repository
+- clone repository
 - `cd dota2-gsi-bounty-clock`
 - `npm install`
 - copy `gamestate_integration_bountyservice.cfg` into `\steamapps\common\dota 2 beta\game\dota\cfg\gamestate_integration`
