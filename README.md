@@ -9,11 +9,11 @@ A node application for Dota 2 game state integration alerts.
 - `npm install`
 - `mv` `gamestate_integration_bountyservice.cfg` into `\steamapps\common\dota 2 beta\game\dota\cfg\gamestate_integration`
 - `node server`
-- navigate to `http://localhost:1337` using `firefox`
+- navigate to `http://localhost:1337` using `Firefox`
 
 ## Browser support
 
-This application is intended to be run only on `Firefox`. The new Google Web Audi API policy prohibits automatic audio playback.
+This application is intended to be run only on `Firefox`. The new Google Web Audio API policy prohibits automatic audio playback.
 
 read more:
 
