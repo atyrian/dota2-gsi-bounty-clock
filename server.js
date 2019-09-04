@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const process = require('process');
 const app = express();
 
 const GSIntegration = require('./server/integration');

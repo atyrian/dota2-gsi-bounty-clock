@@ -8,10 +8,8 @@ class GSIntegration {
       console.log("New client connection, IP address: " + client.ip);
       console.log("Auth token: " + client.auth.token);
 
-      client.on('player:activity', function (activity) {
-        if (activity == 'playing') {
-          GSIntegration._writeData(response, "ON_GAME_START");
-        }
+      client.on('player:activity', (activity) => {
+        if (activity == 'playing') GSIntegration._writeData(response, "ON_GAME_START");
       });
 
       client.on('map:clock_time', (clockTime) => {
