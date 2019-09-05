@@ -95,7 +95,7 @@
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "._2AHkL6KOmssPmzGHqGsxHO {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  width: 100%;\r\n  height: 100%;\r\n  background-image: linear-gradient(#F0C27B, #4B1248);\r\n  /* border-style: solid;\r\n  border-width: 1px;\r\n  border-color: green; */\r\n}\r\n\r\n._155VowlZNi34eVE2qd4P50 {\r\n  display: flex;\r\n  justify-content: center;\r\n  color: #ffffff;\r\n  font-size: 25px;\r\n  font-weight: 700;\r\n}", ""]);
+exports.push([module.i, "._2AHkL6KOmssPmzGHqGsxHO {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  width: 100%;\r\n  height: 100%;\r\n  background-image: linear-gradient(#F0C27B, #4B1248);\r\n}\r\n\r\n._155VowlZNi34eVE2qd4P50 {\r\n  display: flex;\r\n  justify-content: center;\r\n  color: #ffffff;\r\n  font-size: 25px;\r\n  font-weight: 700;\r\n}", ""]);
 // Exports
 exports.locals = {
 	"Container": "_2AHkL6KOmssPmzGHqGsxHO",
@@ -32988,6 +32988,10 @@ function (_Component) {
 
       this.sseSource.onmessage = function (e) {
         var json = JSON.parse(e.data);
+
+        if (json.event === 'heartbeat') {
+          console.log("heartbeat ".concat(Date.now()));
+        }
 
         _this2.playSound(_constants_constants__WEBPACK_IMPORTED_MODULE_4__["SOUND_FILES"][json.event]);
       };

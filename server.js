@@ -3,7 +3,10 @@ const path = require('path');
 const app = express();
 
 const GSIntegration = require('./server/integration');
+const Connections = require('./server/connections');
 const port = 1337;
+let clientArray = [];
+
 
 app.use(express.static(path.join(__dirname, "./public")));
 
@@ -18,7 +21,9 @@ app.get('/sse-gsi', (request, response) => {
     "Cache-Control": "no-cache"
   });
 
-  GSIntegration.init(response);
+  connections = new Connections().getInstance();
+  connections.setupConnection(request.ip, response);
+  GSIntegration.init();
 });
 
 app.listen(port, () => console.log(`Bounty Clock running on http://localhost:${port}`));

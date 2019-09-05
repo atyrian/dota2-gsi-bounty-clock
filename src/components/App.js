@@ -20,6 +20,9 @@ export default class App extends Component {
 
     this.sseSource.onmessage = e => {
       const json = JSON.parse(e.data)
+      if (json.event === 'heartbeat') {
+        console.log(`heartbeat ${Date.now()}`)
+      }
       this.playSound(SOUND_FILES[json.event]);
     }
   }
