@@ -9,7 +9,7 @@ class ConnectionHandler {
     console.log(`Client ${ip} connected. Now: ${this.connections.length} clients connected`)
     res.on("close", () => {
       this.removeConnection(ip)
-      console.log(`Disconnected IP: ${ip}. Now: ${this.connections.length} clients connected`)
+      console.log(`Client: ${ip} disconnected. Now: ${this.connections.length} clients connected`)
     });
   }
 

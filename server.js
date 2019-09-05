@@ -23,7 +23,7 @@ app.get('/sse-gsi', (request, response) => {
 
   connections = new Connections().getInstance();
   connections.setupConnection(request.ip, response);
-  GSIntegration.init(response, clientArray);
+  GSIntegration.init();
 });
 
 app.listen(port, () => console.log(`Bounty Clock running on http://localhost:${port}`));
