@@ -16,9 +16,7 @@ class GSIntegration {
         console.log("Auth token: " + client.auth.token);
 
         client.on('player:activity', (activity) => {
-          if (activity == 'playing') {
-            this.connections.sendToClients('ON_GAME_START');
-          }
+          if (activity == 'playing') this.connections.sendToClients('ON_GAME_START');
         });
 
         client.on('map:clock_time', (clockTime) => {

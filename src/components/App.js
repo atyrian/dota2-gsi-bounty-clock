@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Howl, Howler } from 'howler';
+import { Howl } from 'howler';
 
 import Loader from '../components/Loader/Loader';
 import classes from './App.module.css';
