@@ -1,6 +1,6 @@
 # dota2-gsi-bounty-clock
 
-A node application for Dota 2 game state integration alerts.
+A node application for receiving sound notifications on impending bounty runes in Dota 2
 
 ## Installation
 
